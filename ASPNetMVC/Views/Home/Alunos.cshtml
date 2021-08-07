@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Alunos";
+}
+<h2>@ViewBag.Title.</h2>
+
+<ul>
+    @foreach (atividadeAlunoMedia.Aluno aluno in ViewBag.Alunos)
+    {
+    <li>
+        <div>Id: @aluno.Id</div>
+        <div>Nome: @aluno.Nome</div>
+        <div>Matricula: @aluno.Matricula</div>
+        <div>Notas: @aluno.Notas</div>
+        <div>Media:  @aluno.Media()</div>
+        <div>Situação:  @aluno.Situacao()</div>
+    </li>
+    }
+</ul>
+
